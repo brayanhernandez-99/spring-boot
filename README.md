@@ -1,12 +1,15 @@
 # SPRING BOOT
 This is example of how to implement a page with Spring Boot, Hibernate, JWT, API REST.
 
+
 # Read Me First
 The following was discovered as part of building this project:
 - The Spring Boot was from '3.1.4'.
 - The JVM was from '11' or higher.
 
+
 # Getting Started
+
 
 ### Reference Documentation
 For further reference, please consider the following sections:
