@@ -6,11 +6,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
-    private long id;
+
+    private Long id;
     private String name;
     private String last_name;
     private String email;
     private String password;
     private String phone;
-    private int age;
+    private Integer age;
 }
