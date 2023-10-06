@@ -2,28 +2,26 @@ package com.springboot.example.models;
 
 import lombok.*;
 
-import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+@AllArgsConstructor
+public class User extends Person{
 
-    private long id;
-    private String name;
-    private String last_name;
-    private String email;
+    private String rol;
     private String password;
-    private String phone;
-    private int age;
+    private Date createdAt;
+    private Date updateAt;
 
-    public List<User> getUsers() {
-        return List.of(
-                new User(123, "Leo", "Johnson", "leo@test.com", "pass123", "123456789", 15),
-                new User(1234, "James", "Brown", "james@test.com", "pass123", "987654321", 14),
-                new User(12345, "Andy", "Miller", "andy@test.com", "pass123", "123456789", 23)
-        );
+    public User(long id, String name, String last_name, String email, String rol, String password, Date createdAt, Date updateAt) {
+        super(id, name, last_name, email);
+        this.rol = rol;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.updateAt = updateAt;
     }
 
 }
+
+
