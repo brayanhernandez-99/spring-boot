@@ -7,3 +7,4 @@ CREATE TABLE users (
     phone varchar(20) not null,
     age smallint(3) not null
 );
+x
