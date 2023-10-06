@@ -1,10 +1,11 @@
 CREATE TABLE users (
-    id bigint primary key,
+    id bigint not null,
     name varchar(50) not null,
     last_name varchar(50) not null,
-    email varchar(255) not null,
+    email varchar(100) not null,
     password varchar(50) not null,
-    phone varchar(20) not null,
-    age smallint(3) not null
+    rol varchar(50) not null,
+    createdAt timestamp not null,
+    updateAt timestamp not null,
+    primary key(id,email)
 );
-x
