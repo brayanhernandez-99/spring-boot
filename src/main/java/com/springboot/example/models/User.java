@@ -4,7 +4,6 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class User {
 
     private Long id;
