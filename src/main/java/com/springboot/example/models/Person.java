@@ -2,6 +2,7 @@ package com.springboot.example.models;
 
 import lombok.*;
 
+import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -10,8 +11,8 @@ import javax.persistence.Table;
 @Entity @Table(name = "users")
 public class Person {
 
-    @Column(name = "id")
-    private long id;
+    @Id @Column(name = "id")
+    private Long id;
 
     @Column(name = "name")
     private String name;
