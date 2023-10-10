@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
 @Entity @Table(name = "users")
@@ -23,12 +23,12 @@ public class User extends Person{
     private String rol;
 
     @Column(name = "createdAt")
-    private Date createdAt;
+    private LocalDateTime createdAt;
 
     @Column(name = "updateAt")
-    private Date updateAt;
+    private LocalDateTime updateAt;
 
-    public User(long id, String name, String last_name, String email, String password, String rol, Date createdAt, Date updateAt) {
+    public User(long id, String name, String last_name, String email, String password, String rol, LocalDateTime createdAt, LocalDateTime updateAt) {
         super(id, name, last_name);
         this.email = email;
         this.password = password;
