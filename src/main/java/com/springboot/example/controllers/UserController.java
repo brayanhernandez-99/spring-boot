@@ -1,6 +1,8 @@
 package com.springboot.example.controllers;
 
+import com.springboot.example.dao.UserDAO;
 import com.springboot.example.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,21 +11,21 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
+    private UserDAO userDAO;
+
     @PostMapping("/create")
-    public User postUser() {
-        //return new User(987654321L, "Andy", "Miller", "andy@test.com", "pas123", "123456789", 23);
-        return null;
+    public User postUser(@RequestBody User user) {
+        return userDAO.createUser(user);
     }
 
     @DeleteMapping("/deleted/{id}")
-    public User delUser(@PathVariable long id, @RequestBody User user) {
-        //return new User(id, "Andy", "Miller", "andy@test.com", "pas123", "123456789", 23);
-        return null;
+    public User delUser(@PathVariable long id) {
+        return userDAO.delUser(id);
     }
 
     @PutMapping("/update/{id}")
     public User putUser(@PathVariable long id, @RequestBody User user) {
-        //return new User(id, "Andy", "Miller", "andy@test.com", "pas123", "123456789", 23);
         return null;
     }
 
@@ -35,7 +37,7 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> getUsers() {
-        return null;
+        return userDAO.getUsers();
     }
 
 }
