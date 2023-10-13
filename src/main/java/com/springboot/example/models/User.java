@@ -5,10 +5,6 @@ import lombok.*;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-
-import java.util.Date;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -25,12 +21,12 @@ public class User extends Person {
     private String rol;
 
     @Column(name = "created_at")
-    private Date created_at;
+    private String created_at;
 
     @Column(name = "updated_at")
-    private Date updated_at;
+    private String updated_at;
 
-    public User(long id, String name, String last_name, String email, String password, String rol, Date created_at, Date updated_at) {
+    public User(long id, String name, String last_name, String email, String password, String rol, String created_at, String updated_at) {
         super(id, name, last_name, email);
         this.password = password;
         this.rol = rol;
@@ -38,9 +34,8 @@ public class User extends Person {
         this.updated_at = updated_at;
     }
 
-    public String getCurrentTimeStamp() {
-        DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        return LocalDateTime.now().format(formatterTime);
+    public String getCurrentDate() {
+        return DateTimeFormatter.ofPattern("d-MMMM-yyyy K:mm:ss a").format(LocalDateTime.now());
     }
 
 }

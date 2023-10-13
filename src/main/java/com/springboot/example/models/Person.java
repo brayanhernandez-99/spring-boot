@@ -11,7 +11,7 @@ import javax.persistence.MappedSuperclass;
 @NoArgsConstructor
 @MappedSuperclass
 @Table(name = "users")
-public class Person{
+public class Person {
 
     @Column(name = "dni")
     protected Long dni;
@@ -32,4 +32,5 @@ public class Person{
         this.name = name;
         this.last_name = last_name;
     }
+
 }
