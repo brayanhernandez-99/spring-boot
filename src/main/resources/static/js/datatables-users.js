@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 async function uploadUsers() {
-    const request = await fetch('http://localhost:8080/users', {
+    const request = await fetch('http://localhost:8080/api/user/users', {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
