@@ -11,7 +11,7 @@ import javax.persistence.PersistenceContext;
 
 @Repository
 @Transactional
-public class UserImplements implements UserDAO {
+public class UserDaoImp implements UserDao {
 
     @PersistenceContext
     EntityManager entityManager;
@@ -22,7 +22,7 @@ public class UserImplements implements UserDAO {
     }
 
     @Override
-    public User updateUser(long id) {
+    public User updateUser(long id, @RequestBody User user) {
         return null;
     }
 
