@@ -13,7 +13,7 @@ public interface UserDao {
 
     User delUser(long id);
 
-    User getUser(long id);
+    User getUser(long id) throws Throwable;
 
     List<User> getUsers();
 

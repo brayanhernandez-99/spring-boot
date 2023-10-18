@@ -2,15 +2,11 @@ package com.springboot.example.models;
 
 import lombok.*;
 
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
 @MappedSuperclass
-@Table(name = "users")
 public class Person {
 
     @Column(name = "dni")
@@ -27,6 +23,7 @@ public class Person {
     protected String last_name;
 
     public Person(Long dni, String email, String name, String last_name) {
+        super();
         this.dni = dni;
         this.email = email;
         this.name = name;
