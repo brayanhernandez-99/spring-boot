@@ -9,11 +9,11 @@ public interface UserDao {
 
     User createUser(@RequestBody User user);
 
-    User updateUser(long id, @RequestBody User user);
+    User updateUser(long dni, @RequestBody User user);
 
-    User delUser(long id);
+    User delUser(long dni);
 
-    User getUser(long id) throws Throwable;
+    User getUser(long dni);
 
     List<User> getUsers();
 

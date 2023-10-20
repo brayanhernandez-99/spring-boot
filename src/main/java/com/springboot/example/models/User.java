@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
@@ -35,8 +36,8 @@ public class User extends Person {
         this.updated_at = updated_at;
     }
 
-    public String getCurrentDate() {
-        return DateTimeFormatter.ofPattern("d-MMMM-yyyy K:mm:ss a").format(LocalDateTime.now());
+    public String getCurrentDate(Date date) {
+        return DateTimeFormatter.ofPattern("d-MMMM-yyyy K:mm:ss a").format(date.toInstant());
     }
 
 }

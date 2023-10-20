@@ -3,12 +3,14 @@ package com.springboot.example.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @MappedSuperclass
-public class Person {
+public class Person implements Serializable {
 
+    @Id
     @Column(name = "dni")
     protected Long dni;
 
