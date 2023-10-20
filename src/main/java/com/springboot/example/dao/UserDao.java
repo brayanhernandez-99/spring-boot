@@ -12,7 +12,7 @@ public interface UserDao {
 
     void updateUser(@RequestBody User user);
 
-    void delUser(@RequestHeader String email);
+    void deleteUser(@RequestHeader String email);
 
     User getUser(String email);
 
