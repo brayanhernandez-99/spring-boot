@@ -24,7 +24,6 @@ public class Person implements Serializable {
     protected String last_name;
 
     public Person(Long dni, String email, String name, String last_name) {
-        super();
         this.dni = dni;
         this.email = email;
         this.name = name;

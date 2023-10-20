@@ -14,7 +14,7 @@ public interface UserDao {
 
     void delUser(@RequestHeader String email);
 
-    User getUser(long dni);
+    User getUser(String email);
 
     List<User> getUsers();
 

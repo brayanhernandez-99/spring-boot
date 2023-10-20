@@ -21,14 +21,13 @@ async function uploadUsers() {
 }
 
 async function deleteUser(dni) {
-    if(confirm('Want to delete user')){
-        const request = await fetch('http://localhost:8080/api/user/delete/' + dni, {
-            method: 'DELETE',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-        //location.reload();
-    }
+    alert("Users deleted with dni: " + dni);
+    const request = await fetch('http://localhost:8080/api/user/delete/' + dni, {
+        method: 'DELETE',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    uploadUsers();
 }
