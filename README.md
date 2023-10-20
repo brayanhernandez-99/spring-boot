@@ -1,5 +1,5 @@
 # SPRING BOOT
-This is example of how to implement a page with Spring Boot, Hibernate, JWT, API REST.
+This is example of how to implement a page with Spring Boot, Hibernate, JWT, API REST, Inheritance.
 
 # Read Me First
 The following was discovered as part of building this project:
@@ -21,16 +21,10 @@ This is a list of basic commands to interact with mysql.
 - List Tables: SHOW TABLES;
 - List Columns: SHOW COLUMNS FROM [name_table];
 
-
-
-# Getting Started
-
-
 ### Reference Documentation
 For further reference, please consider the following sections:
 
 - [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 - [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.4/maven-plugin/reference/html/)
 - [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.4/maven-plugin/reference/html/#build-image)
-
 

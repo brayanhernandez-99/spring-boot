@@ -1,17 +1,18 @@
 package com.springboot.example.dao;
 
-import com.springboot.example.models.User;
+import com.springboot.example.model.User;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.util.List;
 
 public interface UserDao {
 
-    User createUser(@RequestBody User user);
+    void createUser(@RequestBody User user);
 
-    User updateUser(long dni, @RequestBody User user);
+    void updateUser(@RequestBody User user);
 
-    User delUser(long dni);
+    void delUser(@RequestHeader String email);
 
     User getUser(long dni);
 

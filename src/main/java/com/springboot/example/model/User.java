@@ -1,12 +1,9 @@
-package com.springboot.example.models;
+package com.springboot.example.model;
 
 import lombok.*;
 
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -14,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class User extends Person {
+public class User extends Person implements Serializable {
 
     @Column(name = "password")
     private String password;

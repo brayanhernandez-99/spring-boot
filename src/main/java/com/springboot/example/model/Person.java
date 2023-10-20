@@ -1,4 +1,4 @@
-package com.springboot.example.models;
+package com.springboot.example.model;
 
 import lombok.*;
 
@@ -10,7 +10,6 @@ import java.io.Serializable;
 @MappedSuperclass
 public class Person implements Serializable {
 
-    @Id
     @Column(name = "dni")
     protected Long dni;
 

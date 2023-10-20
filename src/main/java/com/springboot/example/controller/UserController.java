@@ -1,12 +1,10 @@
-package com.springboot.example.controllers;
+package com.springboot.example.controller;
 
 import com.springboot.example.dao.UserDao;
-import com.springboot.example.exceptions.BadRequestException;
-import com.springboot.example.models.User;
+import com.springboot.example.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -16,19 +14,19 @@ public class UserController {
     @Autowired
     private UserDao userDao;
 
-    @PostMapping("/create")
+    @PostMapping
     public User postUser(@RequestBody User user) {
-        return null;
+        return user;
     }
 
-    @DeleteMapping("/deleted/{id}")
-    public User delUser(@PathVariable long dni) {
-        return new User(123, "Fred", "Myller Tayson", "fred@email.com", "pass123", "user", new Date(), new Date());
+    @PutMapping
+    public User putUser(@RequestBody User user) {
+        return user;
     }
 
-    @PutMapping("/update/{id}")
-    public User putUser(@PathVariable long dni, @RequestBody User user) {
-        return new User(123, "Fred", "Myller Tayson", "fred@email.com", "pass123", "user", new Date(), new Date());
+    @DeleteMapping
+    public void delUser(@RequestHeader String email) {
+        userDao.delUser(email);
     }
 
     @GetMapping("/{id}")
@@ -37,7 +35,7 @@ public class UserController {
         return userDao.getUser(dni);
     }
 
-    @GetMapping("/users")
+    @GetMapping
     public List<User> getUsers() {
         return userDao.getUsers();
     }
