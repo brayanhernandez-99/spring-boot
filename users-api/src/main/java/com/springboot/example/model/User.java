@@ -18,7 +18,7 @@ public class User extends Person implements Serializable {
 
     @Id
     @Column(name = "email")
-    protected String email;
+    private String email;
 
     @Column(name = "password")
     private String password;
