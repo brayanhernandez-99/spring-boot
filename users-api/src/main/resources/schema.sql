@@ -1,3 +1,5 @@
+CREATE TABLE DATABASE users;
+
 CREATE TABLE users (
     dni bigint not null,
     name varchar(50)not null,
