@@ -1,7 +1,7 @@
-package com.springboot.example.service;
+package com.springboot.users.api.service;
 
-import com.springboot.example.model.User;
-import com.springboot.example.repository.UserRepository;
+import com.springboot.users.api.model.User;
+import com.springboot.users.api.repository.UserRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package com.springboot.example.model;
+package com.springboot.users.api.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

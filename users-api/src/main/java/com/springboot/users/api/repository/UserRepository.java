@@ -1,6 +1,6 @@
-package com.springboot.example.repository;
+package com.springboot.users.api.repository;
 
-import com.springboot.example.model.User;
+import com.springboot.users.api.model.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 

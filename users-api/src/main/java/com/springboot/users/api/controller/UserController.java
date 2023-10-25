@@ -1,7 +1,7 @@
-package com.springboot.example.controller;
+package com.springboot.users.api.controller;
 
-import com.springboot.example.model.User;
-import com.springboot.example.repository.UserRepository;
+import com.springboot.users.api.model.User;
+import com.springboot.users.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
