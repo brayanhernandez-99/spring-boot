@@ -1,12 +1,12 @@
-package com.springboot.example.dao;
+package com.springboot.users.api.repository;
 
-import com.springboot.example.model.User;
+import com.springboot.users.api.model.User;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.util.List;
 
-public interface UserDao {
+public interface UserRepository {
 
     void createUser(@RequestBody User user);
 

@@ -1,18 +1,19 @@
-package com.springboot.example.dao;
+package com.springboot.users.api.service;
 
-import com.springboot.example.model.User;
+import com.springboot.users.api.model.User;
+import com.springboot.users.api.repository.UserRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Repository
 @Transactional
-public class UserDaoImpl implements UserDao {
+public class UserService implements UserRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
