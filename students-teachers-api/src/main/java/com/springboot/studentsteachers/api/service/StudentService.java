@@ -1,6 +1,7 @@
-package com.springboot.example.dao;
+package com.springboot.studentsteachers.api.service;
 
-import com.springboot.example.model.User;
+import com.springboot.studentsteachers.api.model.Student;
+import com.springboot.studentsteachers.api.respository.StudentRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,33 +13,33 @@ import javax.persistence.PersistenceContext;
 
 @Repository
 @Transactional
-public class UserDaoImpl implements UserDao {
+public class StudentService implements StudentRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    public void createUser(@RequestBody User user) {
-        entityManager.persist(user);
+    public void createUser(@RequestBody Student student) {
+        entityManager.persist(student);
     }
 
     @Override
-    public void updateUser(@RequestBody User user) {
-        entityManager.merge(user);
+    public void updateUser(@RequestBody Student student) {
+        entityManager.merge(student);
     }
 
     @Override
     public void deleteUser(@RequestHeader String email) {
-        entityManager.remove(entityManager.find(User.class, email));
+        entityManager.remove(entityManager.find(Student.class, email));
     }
 
     @Override
-    public User getUser(String email) {
-        return entityManager.find(User.class, email);
+    public Student getUser(String email) {
+        return entityManager.find(Student.class, email);
     }
 
     @Override
-    public List<User> getUsers() {
+    public List<Student> getUsers() {
         return entityManager.createQuery("FROM User").getResultList();
     }
 
