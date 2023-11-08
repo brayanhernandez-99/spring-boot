@@ -1,4 +1,4 @@
-CREATE TABLE DATABASE users;
+CREATE DATABASE users;
 
 CREATE TABLE users (
     dni bigint not null,
