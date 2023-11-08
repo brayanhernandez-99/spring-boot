@@ -1,6 +1,6 @@
 CREATE DATABASE users;
 
-CREATE TABLE users (
+CREATE TABLE users(
     dni bigint not null,
     name varchar(50)not null,
     last_name varchar(50)not null,
