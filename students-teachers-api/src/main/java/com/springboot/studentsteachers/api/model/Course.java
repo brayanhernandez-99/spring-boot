@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Entity
 @Table(name = "subjects")
-public class Subject {
+public class Course {
 
     @Column(name = "name")
     private String name;
@@ -19,7 +19,7 @@ public class Subject {
     @Column(name = "teacher")
     private Teacher teacher;
 
-    public Subject(String name, Teacher teacher) {
+    public Course(String name, Teacher teacher) {
         this.name = name;
         this.teacher = teacher;
     }

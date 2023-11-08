@@ -17,11 +17,11 @@ import java.util.List;
 public class Student extends Person implements Serializable {
 
     @Column(name = "subjects")
-    private List<Subject> subjects;
+    private List<Course> courses;
 
-    public Student(Long dni, String name, String last_name, String email, String password, String rol, Date created_at, Date updated_at, List<Subject> subjects) {
+    public Student(Long dni, String name, String last_name, String email, String password, String rol, Date created_at, Date updated_at, List<Course> courses) {
         super(dni, name, last_name, email, password, rol, created_at, updated_at);
-        this.subjects = subjects;
+        this.courses = courses;
     }
 
 }

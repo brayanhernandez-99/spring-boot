@@ -12,18 +12,18 @@ CREATE TABLE persons(
     primary key(dni)
 );
 
-CREATE TABLE subjects(
+CREATE TABLE courses(
     id int not null auto_increment,
     name varchar(50) not null,
     primary key(id)
 );
 
-CREATE TABLE students_subjects(
+CREATE TABLE students_courses(
     student bigint not null,
-    subject int not null,
+    course int not null,
     foreign key(student) references persons(dni),
-    foreign key(subject) references subjects(id),
-    primary key(student, subject)
+    foreign key(course) references courses(id),
+    primary key(student, course)
 );
 
 CREATE TABLE teachers_students(
